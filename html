@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Site com Foto e Música</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0; /* Cor de fundo da página */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Faz com que o conteúdo ocupe toda a altura da tela */
+    }
+    img {
+        width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+        max-width: 100%; /* Define a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 10px; /* Arredonda as bordas da imagem */
+    }
+</style>
+</head>
+<body>
+<img src="caminho_para_a_sua_foto.jpg" alt="Descrição da foto">
+<audio autoplay loop>
+    <source src="caminho_para_a_sua_musica.mp3" type="audio/mp3">
+    Seu navegador não suporta a tag de áudio.
+</audio>
+</body>
+</html>
