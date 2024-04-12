@@ -20,13 +20,36 @@
         height: auto; /* Mantém a proporção da imagem */
         border-radius: 10px; /* Arredonda as bordas da imagem */
     }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
 </style>
 </head>
 <body>
 <img src="background.jpg" alt="background">
-<audio autoplay loop>
+<audio id="myAudio" autoplay loop>
     <source src="musica.mp3" type="audio/mp3">
     Seu navegador não suporta a tag de áudio.
 </audio>
+<button onclick="toggleAudio()">Reproduzir/Pausar música</button>
+
+<script>
+var audio = document.getElementById("myAudio");
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+</script>
 </body>
 </html>
