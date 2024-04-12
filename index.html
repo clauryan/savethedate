@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Site com Vídeo do YouTube</title>
+<title>Meu Site com Música</title>
 <style>
     body {
         margin: 0;
@@ -15,7 +15,7 @@
         height: 100vh; /* Faz com que o conteúdo ocupe toda a altura da tela */
         position: relative; /* Adicionado para posicionamento do botão */
     }
-    .videoWrapper {
+    .audioWrapper {
         position: absolute;
         top: -9999px;
         left: -9999px;
@@ -36,16 +36,16 @@
 </style>
 </head>
 <body>
-<div class="videoWrapper">
-    <iframe width="1" height="1" src="https://www.youtube.com/embed/cDVR_Tf56pE?si=RYTSyVarqmUdsK98&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="audioWrapper">
+    <audio id="backgroundMusic" src="musica.mp3" autoplay loop></audio>
 </div>
 <img src="background.jpg" alt="background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-<button onclick="playVideo()">Reproduzir Vídeo</button>
+<button onclick="playMusic()">Reproduzir Música</button>
 
 <script>
-function playVideo() {
-    var iframe = document.querySelector('.videoWrapper iframe');
-    iframe.src += "&autoplay=1";
+function playMusic() {
+    var audio = document.getElementById('backgroundMusic');
+    audio.play();
 }
 </script>
 </body>
